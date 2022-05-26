@@ -130,12 +130,13 @@ module.exports = (options = {}) => ({
             const outMainPath = path.resolve(rootDir, outfile !== null && outfile !== void 0 ? outfile : "");
             const outMainDir = path.dirname(outMainPath);
             const outMainBaseName = path.basename(outMainPath, ".js");
-            const mainCssPath = path.resolve(`${outMainDir}\\${outMainBaseName}.css`);
+            const mainCssPath = path.resolve(outMainDir, `${outMainBaseName}.css`);
             fs.access(mainCssPath, fs.constants.F_OK, (err) => {
                 if (err) {
+                    console.log(err);
                     return;
                 }
-                fs.renameSync(mainCssPath, `${outMainDir}\\${outName}.css`);
+                fs.renameSync(mainCssPath, path.resolve(outMainDir, `${outName}.css`));
             });
         });
     },

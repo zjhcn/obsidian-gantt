@@ -82,14 +82,15 @@ export = (options: Options = {}): Plugin => ({
       const outMainPath = path.resolve(rootDir, outfile ?? "");
       const outMainDir = path.dirname(outMainPath);
       const outMainBaseName = path.basename(outMainPath, ".js");
-      const mainCssPath = path.resolve(`${outMainDir}\\${outMainBaseName}.css`);
+      const mainCssPath = path.resolve(outMainDir, `${outMainBaseName}.css`);
 
       fs.access(mainCssPath, fs.constants.F_OK, (err: Error | null) => {
         if (err) {
+          console.log(err);
           return;
         }
 
-        fs.renameSync(mainCssPath, `${outMainDir}\\${outName}.css`);
+        fs.renameSync(mainCssPath, path.resolve(outMainDir, `${outName}.css`));
       });
     });
   },
