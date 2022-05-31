@@ -20,12 +20,13 @@
             "ES7"
         ],
         "types": [
-            "lodash"
+            "lodash",
+            "moment"
         ]
     },
     "include": [
-        "**/*.ts",
-        "**/*.vue",
+        "**/**/*.ts",
+        "**/**/*.vue",
     ],
     "exclude": [
         "node_modules",

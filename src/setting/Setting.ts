@@ -1,5 +1,5 @@
 import { PluginSettingTab } from "obsidian";
-import { GanttPlugin, GanttSettings } from "src/gantt.type";
+import { GanttPlugin, GanttSettings } from "src/types";
 import { SettingsManager } from "./SettingsManager";
 
 export interface SettingsManagerConfig {

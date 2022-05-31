@@ -2,9 +2,9 @@ import update, { Spec } from "immutability-helper";
 import { App } from "obsidian";
 import { createApp } from "vue";
 import { DEFAULT_SETTINGS } from "src/default-settings";
-import { GanttPlugin, GanttSettings } from "src/gantt.type";
+import { GanttPlugin, GanttSettings } from "src/types";
 import { SettingsManagerConfig } from "./Setting";
-import Hello from "src/components/Hello.vue";
+import Hello from "src/components/Card.vue";
 
 export class SettingsManager {
   app: App;
