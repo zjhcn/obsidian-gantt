@@ -9,3 +9,7 @@
 ### Manually installing the plugin
 
 - Copy over `dist/main.js`, `dist/styles.css`, `dist/manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+
+### TODO
+
+- [ ] sort tasks
